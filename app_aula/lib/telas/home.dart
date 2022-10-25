@@ -42,6 +42,14 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed('/sobre');
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.account_circle_outlined),
+              title: const Text('Eu'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/matricula');
+              },
+            ),
           ],
         ),
       ),
