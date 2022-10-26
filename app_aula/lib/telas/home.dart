@@ -50,6 +50,14 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed('/matricula');
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.people),
+              title: const Text('Dias Vividos'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/diasVividos');
+              },
+            ),
           ],
         ),
       ),
