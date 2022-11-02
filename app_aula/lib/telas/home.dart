@@ -58,6 +58,30 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed('/diasVividos');
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_sharp),
+              title: const Text('Dias Vividos OO'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed("/diasVividosOo");
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_sharp),
+              title: const Text('Exemplo ListView'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed("/exemploListView");
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_sharp),
+              title: const Text('Imc Oo'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed("/imcOo");
+              },
+            ),
           ],
         ),
       ),

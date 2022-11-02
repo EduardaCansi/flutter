@@ -1,5 +1,8 @@
 import 'package:app_aula/telas/contador.dart';
+import 'package:app_aula/telas/dias_vividos_oo.dart';
+import 'package:app_aula/telas/exemplo_listview.dart';
 import 'package:app_aula/telas/home.dart';
+import 'package:app_aula/telas/imc_oo.dart';
 import 'package:app_aula/telas/sobre.dart';
 import 'package:app_aula/telas/matricula.dart';
 import 'package:app_aula/telas/dias_vividos.dart';
@@ -28,6 +31,11 @@ class MyApp extends StatelessWidget {
         '/matricula': (context) => const MatriculaPage(),
         '/diasVividos': (context) =>
             const DiasVividosPage(title: "Dias Vividos"),
+        '/diasVividosOo': (context) =>
+            const DiasVividosOoPage(title: 'Dias vividos OO'),
+        '/exemploListView': (context) =>
+            const ExemploListPage(title: 'Exemplo ListView'),
+        '/imcOo': (context) => const ImcOoPage(title: 'Imc Oo'),
       },
     );
   }

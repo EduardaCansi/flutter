@@ -17,7 +17,7 @@ class _ImcPageState extends State<ImcPage> {
 
   void _calcular() {
     setState(() {
-      _imc = (_peso / _altura) * 2;
+      _imc = _peso / (_altura * _altura) ;
     });
   }
 
