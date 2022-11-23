@@ -82,6 +82,22 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed("/imcOo");
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_sharp),
+              title: const Text('Contatos'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed("/contatoList");
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_pin_sharp),
+              title: const Text('Contatos Api'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed("/contatoListApi");
+              },
+            )
           ],
         ),
       ),

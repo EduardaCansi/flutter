@@ -1,4 +1,6 @@
+import 'package:app_aula/api/contatos_list_page.dart';
 import 'package:app_aula/telas/contador.dart';
+import 'package:app_aula/telas/contatos_list_page.dart';
 import 'package:app_aula/telas/dias_vividos_oo.dart';
 import 'package:app_aula/telas/exemplo_listview.dart';
 import 'package:app_aula/telas/home.dart';
@@ -36,6 +38,10 @@ class MyApp extends StatelessWidget {
         '/exemploListView': (context) =>
             const ExemploListPage(title: 'Exemplo ListView'),
         '/imcOo': (context) => const ImcOoPage(title: 'Imc Oo'),
+        '/contatoList': (context) =>
+            const ContatosListPage(title: 'Lista Contatos SQLite'),
+        '/contatoListApi': (context) =>
+            const ContatosListApiPage(title: 'Lista Contatos SQLiteApi'),
       },
     );
   }
