@@ -86,11 +86,11 @@ class _RelatoriosListPageState extends State<RelatoriosListPage> {
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
                 title: Row(children: <Widget>[
-                  Text('${relatorios[index].id}'),
-                  const SizedBox(width: 20),
                   Text(relatorios[index].nome!),
                   const SizedBox(width: 20),
-                  Text(relatorios[index].telefone!),
+                  Text(relatorios[index].rua!),
+                  const SizedBox(width: 20),
+                  Text(relatorios[index].problema!),
                 ]),
                 onTap: () => selecionar(index),
               );

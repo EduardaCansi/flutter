@@ -55,6 +55,7 @@ class _ImcPageState extends State<ImcPage> {
               TextFormField(
                 keyboardType: TextInputType.number,
                 maxLength: 5,
+                
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Digite o Peso',
