@@ -1,3 +1,4 @@
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:trabalho_final/model/Relatorio.dart';
 import 'package:trabalho_final/sqlite/RelatorioHelper.dart';
 import 'package:trabalho_final/telas/relatorios_edit_page.dart';
@@ -16,6 +17,11 @@ class _RelatoriosListPageState extends State<RelatoriosListPage> {
   final relatoriosDb = RelatorioHelper();
   List<Relatorio> relatorios = List.empty();
   Relatorio? selecionado;
+
+  final _telefoneMaskFormatter = MaskTextInputFormatter(
+      mask: '(##) #####-####',
+      filter: {"#": RegExp(r'[0-9]')},
+      type: MaskAutoCompletionType.lazy);
 
   void _getAllRelatorios() {
     relatoriosDb.obterTodos().then((list) {
@@ -85,13 +91,16 @@ class _RelatoriosListPageState extends State<RelatoriosListPage> {
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
-                title: Row(children: <Widget>[
-                  Text(relatorios[index].nome!),
-                  const SizedBox(width: 20),
-                  Text(relatorios[index].rua!),
-                  const SizedBox(width: 20),
-                  Text(relatorios[index].problema!),
-                ]),
+                title: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(relatorios[index].nome!),
+                      const SizedBox(width: 30),
+                      Text(relatorios[index].bairro!),
+                      const SizedBox(width: 20),
+                      Text(_telefoneMaskFormatter
+                          .maskText(relatorios[index].telefone!)),
+                    ]),
                 onTap: () => selecionar(index),
               );
             },
