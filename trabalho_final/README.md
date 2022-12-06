@@ -1,16 +1,13 @@
-# trabalho_final
+# Trabalho Final
 
-A new Flutter project.
+Daniel Conte (182736)
 
-## Getting Started
+Eduarda Cansi (182738)
 
-This project is a starting point for a Flutter application.
+### Resumo
 
-A few resources to get you started if this is your first Flutter project:
+Este projeto consiste em um aplicativo Flutter que permite o usuário informar problemas na infraestrutura da cidade, como buracos na estrada e postes sem luz, assim facilitando a comunicação entre prefeitura e cidadão.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+O aplicativo possui a tela inicial com informações básicas, uma listagem dos problemas e uma tela de manutenção dos problemas.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A manutenção de problemas possui validações e máscara no campo de telefone.
